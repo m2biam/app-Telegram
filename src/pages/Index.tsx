@@ -12,7 +12,7 @@ const Index = () => {
       <main className="container mx-auto px-4 max-w-5xl">
         <div className="py-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-[#0a6c54] mb-4 relative inline-block">
-            Best-Selling . Designs
+            Best-Selling Designs
             <span className="block w-16 h-1 bg-[#d4ac47] mx-auto mt-4 rounded-full"></span>
           </h1>
           <p className="text-lg md:text-xl text-gray-500 font-medium max-w-2xl mx-auto mt-2">
