@@ -18,9 +18,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         />
       </div>
       <div className="p-5 flex flex-col flex-grow">
-        <h2 className="text-lg font-bold text-[#0a6c54] mb-2 line-clamp-2 leading-snug">
+        <h2 className="text-lg font-bold text-[#0a6c54] mb-1 line-clamp-2 leading-snug">
           {product.title}
         </h2>
+        {product.subtitle && (
+          <p className="text-sm font-normal text-gray-500 mb-2">
+            {product.subtitle}
+          </p>
+        )}
         <p className="text-xl font-bold text-[#d4ac47] mb-3">
           {product.price}
         </p>
@@ -39,8 +44,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </Button>
           <Button 
             asChild
-            variant="outline"
-            className="border-[#0a6c54] text-[#0a6c54] hover:bg-[#f0fdfa] font-semibold py-5 rounded-xl transition-all duration-200"
+            className="bg-[#9feab9] hover:bg-[#43f2af] text-[#0a6c54] font-bold py-6 rounded-xl transition-all duration-300 border-none"
           >
             <a href={shopUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="mr-2 h-4 w-4" />

@@ -1,5 +1,6 @@
 export interface Product {
   title: string;
+  subtitle?: string;
   image: string;
   price: string;
   link: string;
@@ -17,6 +18,7 @@ export const products: Product[] = [
   },
   {
     title: "Proud Gamer Graphic T-Shirt",
+    subtitle: "Best-selling gamer design",
     image: "/images/13.jpg",
     price: "$28.39",
     link: "https://www.redbubble.com/i/t-shirt/Proud-Gamer-by-lmartes/172375703.1YYVU?asc=u",
