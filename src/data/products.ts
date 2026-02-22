@@ -43,12 +43,14 @@ export const products: Product[] = [
   },
   {
     title: "Mandala style print pattern Pillow",
+    subtitle: "Customer Favorite",
     image: "/images/17.jpg",
     price: "$17.48",
     link: "https://www.redbubble.com/i/throw-pillow/Mandala-style-print-pattern-by-lmartes/163907855.5X2YF?asc=u",
   },
   {
     title: "Mandala style print pattern iPhone Case",
+    subtitle: "Best-Selling Design",
     image: "/images/18.jpg",
     price: "$26.11",
     link: "https://www.redbubble.com/i/iphone-case/Mandala-style-print-pattern-by-lmartes/163907855.KN0HK?asc=u",
