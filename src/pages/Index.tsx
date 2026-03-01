@@ -32,14 +32,14 @@ const Index = () => {
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
             <Button
               key={category}
               variant="outline"
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "rounded-full px-6 py-2 transition-all duration-300 border-2",
+                "rounded-full px-4 py-6 md:py-2 transition-all duration-300 border-2 text-sm md:text-base h-auto w-full md:w-auto",
                 activeCategory === category 
                   ? "bg-[#0a6c54] text-white border-[#0a6c54] hover:bg-[#0a6c54] hover:text-white" 
                   : "bg-white text-[#0a6c54] border-gray-100 hover:border-[#0a6c54] hover:bg-transparent"
