@@ -2,7 +2,6 @@ import React, { useState, useMemo } from 'react';
 import Header from '@/components/Header';
 import ProductCard from '@/components/ProductCard';
 import { products, Product } from '@/data/products';
-import { MadeWithDyad } from '@/components/made-with-dyad';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -77,7 +76,7 @@ const Index = () => {
       </main>
       
       <footer className="mt-12">
-        <MadeWithDyad />
+        {/* MadeWithDyad removed */}
       </footer>
     </div>
   );
