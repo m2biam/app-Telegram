@@ -7,7 +7,6 @@ export interface Product {
 }
 
 export const shopUrl = "https://www.redbubble.com/people/lmartes/shop?asc=u";
-export const commonDesc = "Available in multiple colors for apparel. These designs are also featured on stickers, bucket hats, mouse pads, and more!";
 
 export const products: Product[] = [
   {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product, commonDesc, shopUrl } from '../data/products';
+import { Product, shopUrl } from '../data/products';
 import { Button } from './ui/button';
 import { ExternalLink, ShoppingCart } from 'lucide-react';
 
@@ -26,11 +26,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             {product.subtitle}
           </p>
         )}
-        <p className="text-xl font-bold text-[#d4ac47] mb-3">
+        <p className="text-xl font-bold text-[#d4ac47] mb-6">
           {product.price}
-        </p>
-        <p className="text-sm text-gray-500 mb-6 line-clamp-3 italic">
-          {commonDesc}
         </p>
         <div className="flex flex-col gap-3 mt-auto">
           <Button 
