@@ -26,7 +26,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             {product.subtitle}
           </p>
         )}
-        <p className="text-xl font-bold text-[#9feab9] mb-6">
+        <p className="text-xl font-bold text-[#d4ac47] mb-6">
           {product.price}
         </p>
         <div className="flex flex-col gap-3 mt-auto">
