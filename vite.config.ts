@@ -1,14 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import dyadPkg from 'dyad'
-
-// Esta linha abaixo é a correção mágica para o erro que deu no print!
-const { dyadComponentTagger } = dyadPkg
+import dyad from 'dyad' // <-- AQUI: Sem as chaves { }
 
 export default defineConfig({
   plugins: [
     react(),
-    dyadComponentTagger()
+    dyad.dyadComponentTagger() // <-- AQUI: Tem o "dyad." na frente
   ],
   base: './',
 })
