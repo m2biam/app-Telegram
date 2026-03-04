@@ -9,21 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "dyad": "latest",
     "lucide-react": "latest",
-    "@radix-ui/react-slot": "latest",
-    "class-variance-authority": "latest",
     "clsx": "latest",
-    "tailwind-merge": "latest",
-    "tailwindcss-animate": "latest"
+    "tailwind-merge": "latest"
   },
   "devDependencies": {
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0",
     "@vitejs/plugin-react": "^4.2.1",
-    "@dyad-sh/react-vite-component-tagger": "latest",
     "autoprefixer": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
