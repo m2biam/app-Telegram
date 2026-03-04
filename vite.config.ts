@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { dyadComponentTagger } from '@dyad-sh/react-vite-component-tagger'
+import dyad from 'dyad'
 
 export default defineConfig({
   plugins: [
     react(),
-    dyadComponentTagger()
+    dyad.dyadComponentTagger()
   ],
   base: './',
 })
