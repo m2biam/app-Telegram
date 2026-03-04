@@ -1,16 +1,18 @@
 import { defineConfig } from "vite";
-import dyadComponentTagger from "@dyad-sh/react-vite-component-tagger";
-import react from "@vitejs/plugin-react-swc";
+import react from "@vitejs/plugin-react";
 import path from "path";
+import { dyadComponentTagger } from "dyad";
 
-export default defineConfig(() => ({
+export default defineConfig(({ mode }) => ({
+  base: '/app-Telegram/',
   server: {
     host: "::",
     port: 8080,
- // ... (o que tiver para cima)
-export default defineConfig(({ mode }) => ({
-  base: '/app-Telegram/', // <--- INSIRA ESTA LINHA AQUI (com aspas e vírgula!)
-  plugins: [dyadComponentTagger(), react()],
+  },
+  plugins: [
+    react(),
+    mode === 'development' && dyadComponentTagger(),
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
