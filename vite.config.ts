@@ -1,21 +1,14 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
-import { dyadComponentTagger } from "dyad";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import dyadPkg from 'dyad'
 
-export default defineConfig(({ mode }) => ({
-  base: '/app-Telegram/',
-  server: {
-    host: "::",
-    port: 8080,
-  },
+// Esta linha abaixo é a correção mágica para o erro que deu no print!
+const { dyadComponentTagger } = dyadPkg
+
+export default defineConfig({
   plugins: [
     react(),
-    mode === 'development' && dyadComponentTagger(),
-  ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-}));
+    dyadComponentTagger()
+  ],
+  base: './',
+})
