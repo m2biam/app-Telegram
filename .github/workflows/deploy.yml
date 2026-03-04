@@ -1,7 +1,7 @@
-name: Deploy Vite
+name: Deploy
 on:
   push:
-    branches: ["main"]
+    branches: [main]
 permissions:
   contents: read
   pages: write
@@ -10,30 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Instalar pnpm
-        uses: pnpm/action-setup@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          version: 9
-
-      - name: Configurar Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'pnpm'
-
-      - name: Instalar tudo (Sem travas)
-        run: pnpm install --no-frozen-lockfile
-
-      - name: Construir site (Build)
-        run: pnpm run build
-
-      - name: Subir para o GitHub
-        uses: actions/upload-pages-artifact@v3
+          node-version: 18
+      - name: Instalar Peças
+        run: npm install
+      - name: Montar Site (Build)
+        run: npm run build
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
-
-      - name: Publicar
-        uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v4
