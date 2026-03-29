@@ -9,11 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "@tailwindcss/postcss": "^4.2.2",
+    "clsx": "latest",
     "dyad": "latest",
     "lucide-react": "latest",
-    "clsx": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "tailwind-merge": "latest"
   },
   "devDependencies": {
